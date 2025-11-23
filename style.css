@@ -1,0 +1,29 @@
+body {
+  background: #111;
+  color: #fff;
+  font-family: monospace;
+  padding: 20px;
+  text-align: center;
+}
+
+#sprite-container {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+#sprite {
+  width: 100%;
+  height: auto;
+}
+
+#log {
+  background: #000;
+  padding: 15px;
+  height: 250px;
+  overflow-y: auto;
+  border-radius: 10px;
+  text-align: left;
+  margin-top: 20px;
+}
