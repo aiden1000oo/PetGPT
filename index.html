@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+
+  <title>Pet GPT Ultra</title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://unpkg.com/@mlc-ai/web-llm/dist/index.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+
+  <h1>🐾 Pet GPT Ultra</h1>
+
+  <div id="sprite-container">
+    <img id="sprite" src="sprites/idle.gif">
+  </div>
+
+  <div id="stats">
+    <div>Chaos: <span id="stat-chaos">50</span></div>
+    <div>Hunger: <span id="stat-hunger">50</span></div>
+    <div>Affection: <span id="stat-love">50</span></div>
+  </div>
+
+  <textarea id="input" placeholder="Talk to your pet..."></textarea>
+
+  <div class="buttons">
+    <button id="send">Send</button>
+    <button id="mic">🎤 Speak</button>
+    <button id="feed">🍕 Feed</button>
+    <button id="cuddle">💞 Cuddle</button>
+  </div>
+
+  <div id="log"></div>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+
+</body>
+</html>
